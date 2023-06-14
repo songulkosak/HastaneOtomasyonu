@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AABF7587-CC6C-4BF7-B761-1167CCB2EF33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HastaneOtomasyonu</RootNamespace>
+    <AssemblyName>HastaneOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.7.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp-LGPL-BouncyCastle-1.8.4.1.7\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arayüzler\InnerClass.cs" />
+    <Compile Include="Arayüzler\Interface2.cs" />
+    <Compile Include="Arayüzler\Interface3.cs" />
+    <Compile Include="DAL\DoktorTbl.cs" />
+    <Compile Include="DAL\Hasta.cs" />
+    <Compile Include="Arayüzler\Interface1.cs" />
+    <Compile Include="DAL\Randevu.cs" />
+    <Compile Include="Doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doktor.Designer.cs">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorGiris.Designer.cs">
+      <DependentUpon>DoktorGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorRecete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorRecete.Designer.cs">
+      <DependentUpon>DoktorRecete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hasta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hasta.Designer.cs">
+      <DependentUpon>Hasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaGiris.Designer.cs">
+      <DependentUpon>HastaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaGuncelle.Designer.cs">
+      <DependentUpon>HastaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaRecete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaRecete.Designer.cs">
+      <DependentUpon>HastaRecete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaYeniKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaYeniKayit.Designer.cs">
+      <DependentUpon>HastaYeniKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandevuSistemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuSistemi.Designer.cs">
+      <DependentUpon>RandevuSistemi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doktor.resx">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorGiris.resx">
+      <DependentUpon>DoktorGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorRecete.resx">
+      <DependentUpon>DoktorRecete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hasta.resx">
+      <DependentUpon>Hasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaGiris.resx">
+      <DependentUpon>HastaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaGuncelle.resx">
+      <DependentUpon>HastaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaRecete.resx">
+      <DependentUpon>HastaRecete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaYeniKayit.resx">
+      <DependentUpon>HastaYeniKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RandevuSistemi.resx">
+      <DependentUpon>RandevuSistemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1254739030-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-doctors-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-2012-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto3-1254739030-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t-c-saglik-bakanligi-ucretsiz-logo-yildiz-ay-insan-figuru-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-802198182-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-date-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bell-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-2012-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-document-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-about-me-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-manager-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
